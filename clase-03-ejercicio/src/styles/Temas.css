@@ -1,0 +1,13 @@
+.temas-container {
+  background: #8a2d3b;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 10px;
+  color: black;
+}
+
+.temas-button {
+  margin: 10px;
+  /* background-color: #393e46; */
+}

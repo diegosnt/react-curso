@@ -1,0 +1,13 @@
+.proyecto-card {
+  background: #be5b50;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+}
+
+.proyecto-button {
+  margin: 10px;
+  background-color: #393e46;
+}

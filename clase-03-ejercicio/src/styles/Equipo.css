@@ -1,0 +1,24 @@
+.team-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.team-card {
+  background: #f1ba88;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  color: black;
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
