@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/Global.css";
 
+
 function ProductCard({ product }) {
+
+
 
   return (
 
@@ -9,10 +12,13 @@ function ProductCard({ product }) {
         <div key={product.nombre} className="product-card">
           <div>
             <h1>{product.nombre}</h1>
-            <p>{product.rol}</p>
+            <p>{product.descripcion}</p>
           </div>
           <div>
             <img className ="product-image" src={product.imagen} alt=""/>
+          </div>
+          <div>
+            <p>{product.precio} $</p>
           </div>
         </div>
     </>
