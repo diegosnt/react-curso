@@ -1,0 +1,73 @@
+
+
+/* Header -------------------------------------------*/
+.header{
+    background-color: #096B68;
+    padding: 10px;
+    text-align: center; 
+    color: white;
+} 
+
+
+/* Nav ----------------------------------------------*/
+.nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main ----------------------------------------------*/
+.main {
+    background-color: #129990;
+    padding: 20px;
+}
+
+/* Footer ----------------------------------------------*/
+
+.footer {
+  background-color: #90D1CA;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+
+/* ProductCard ----------------------------------------------*/
+
+.product-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.product-card {
+  background: #f1ba88;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  color: black;
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}

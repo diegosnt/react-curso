@@ -1,20 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Temas.css";
 
 function GaleriaIntereses({ temas }) {
-  let color = "#393e46";
-
-  //TODO  AJUSTES
+  const [color, setColor] = useState("#393e46");
 
   function cambiarColor() {
-    console.log(color);
     if (color == "#393e46") {
-      color = "#03A791";
-      console.log(color);
+      setColor("#03A791");
+
     } else {
-      color = "#393e46";
-      console.log(color);
+      setColor("#393e46");
     }
+    
   }
 
   return (

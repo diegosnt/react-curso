@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "Silvia",
+    "rol": "Product Owner",
+    "imagen": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+  },
+
+  {
+    "nombre": "Luis",
+    "rol": "Diseñador UX/UI",
+    "imagen": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+  },
+  {
+    "nombre": "Matías",
+    "rol": "Desarrollador",
+    "imagen": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+  },
+  {
+    "nombre": "Sabrina",
+    "rol": "Desarrolladora",
+    "imagen": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+  }
+]
