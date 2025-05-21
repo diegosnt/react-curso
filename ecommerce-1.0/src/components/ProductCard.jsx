@@ -2,8 +2,21 @@ import React from "react";
 import "../styles/Global.css";
 
 
-function ProductCard({ product }) {
+function ProductCard({ product, funcionCarrito }) {
 
+  function agregarAlCarrito() {
+    console.log("PASO 1");
+    funcionCarrito(product);
+  }
+
+
+  /*
+    function agregarAlCarrito(producto) {
+    nuevoCarrito = productosCarrito;
+    nuevoCarrito.push(producto);
+    setProductosCarrito(nuevoCarrito);
+  }
+  */
 
 
   return (
@@ -20,6 +33,7 @@ function ProductCard({ product }) {
           <div>
             <p>{product.precio} $</p>
           </div>
+          <button onClick={agregarAlCarrito} style={{color:"black"}}>Agregar al carrito</button>
         </div>
     </>
   );
