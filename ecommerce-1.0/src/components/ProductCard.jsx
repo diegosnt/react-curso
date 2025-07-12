@@ -22,9 +22,9 @@ function ProductCard({ product, funcionCarrito }) {
   return (
 
     <>
-        <div key={product.nombre} className="product-card">
+        <div key={product.name} className="product-card">
           <div>
-            <h1>{product.nombre}</h1>
+            <h1>{product.name}</h1>
             <p>{product.descripcion}</p>
           </div>
           <div>
