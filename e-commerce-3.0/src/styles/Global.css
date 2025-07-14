@@ -1,0 +1,319 @@
+/* Header -------------------------------------------*/
+.header {
+  background-color: #5459ac;
+  padding: 1px 1px 1px 1px;
+  text-align: center;
+  color: white;
+}
+
+/* Nav ----------------------------------------------*/
+.nav {
+  background-color: #333;
+  color: white;
+  padding: 1px 1px 1px 10px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  margin-left: 5px;
+  display: inline-block;
+  min-width: 10px;
+  text-align: center;
+  line-height: normal;
+}
+
+/* Main ----------------------------------------------*/
+.main {
+  background-color: #b2d8ce;
+  color: black;
+  padding: 1px 1px 1px 20px;
+}
+
+/* Footer ----------------------------------------------*/
+.footer {
+  background-color: #648db3;
+  padding: 1px 1px 1px 10px;
+  text-align: center;
+  color: black;
+}
+
+/* producto --------------------------------------------*/
+
+.productos-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 100%;
+}
+
+.producto-card {
+  background: #648db3;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.producto-image {
+  width: 140px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.producto-name {
+  color: black;
+}
+
+.producto-price {
+  color: black;
+  font-style: italic;
+}
+
+.boton-detalles {
+  background-color: #52357b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-detalles:hover {
+  background-color: #333;
+}
+
+.boton-detalles:active {
+  background-color: #555;
+}
+
+/* About ----------------------------------------------*/
+.about {
+  color: black;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Admin ----------------------------------------------*/
+.admin {
+  color: black;
+}
+
+/* ProductosContainer ---------------------------------*/
+.cargando {
+  color: black;
+}
+
+/* ProductoDetalle------------------------------------*/
+.detalle-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background-color: #648db3;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  align-items: center;
+}
+
+.detalle-imagen {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.detalle-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+}
+
+.detalle-contador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
+
+.detalle-contador span {
+  font-size: 18px;
+  color: black;
+}
+
+/* Carrito ------------------------------------*/
+.carrito-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.carrito-titulos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 30%;
+  width: 100%;
+  color: black;
+}
+
+.carrito-titulo-producto {
+  width: 20%;
+}
+
+.carrito-titulo-descripcion {
+  width: 30%;
+}
+
+.carrito-card {
+  border: solid;
+  border-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #648db3;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  height: 150px;
+}
+
+.carrito-producto {
+  width: 20%;
+}
+
+.descripcion-carrito {
+  width: 30%;
+}
+
+.boton-carrito {
+  width: 3%;
+  height: 30%;
+}
+
+.carrito-image {
+  width: 100px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.carrito-sub{
+    color: black;
+    font-weight: bold;
+}
+
+
+.boton-carrito {
+  background-color: #dc3545; /* Un rojo más estándar para "eliminar" */
+  color: white; /* Texto blanco para contraste */
+  border: none;
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente legible */
+  cursor: pointer; /* Indica que es clickeable */
+  transition: background-color 0.2s ease; /* Transición suave al pasar el ratón */
+  margin: 5px 10px; 
+}
+
+.boton-carrito:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+}
+
+.boton-carrito:active {
+  background-color: #bd2130; /* Rojo aún más oscuro al hacer click */
+}
+
+.boton-carrito:focus {
+  outline: none; /* Elimina el contorno de enfoque predeterminado */
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); /* Sombra de enfoque sutil */
+}
+
+
+.total-a-pagar {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white; 
+  text-align: right; 
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-top: 2px solid #eee;
+  background-color: green;
+  border-radius: 5px;
+  display: block;
+}
+
+.vaciar-carrito-btn {
+  background-color: #dc3545; /* Amarillo/naranja de advertencia */
+  color: white;; /* Texto oscuro para contraste */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Transición suave */
+  margin-top: 15px; /* Margen superior para separarlo de otros elementos */
+  align-self: flex-end; /* Si el padre es flexbox y quieres que se alinee a la derecha */
+}
+
+.vaciar-carrito-btn:hover {
+  background-color: #c82333; /* Amarillo/naranja más oscuro al pasar el ratón */
+  transform: translateY(-1px); /* Efecto ligero de elevación */
+}
+
+.vaciar-carrito-btn:active {
+  background-color: #bd2130; /* Aún más oscuro al hacer clic */
+  transform: translateY(0); /* Vuelve a su posición original */
+}
+
+.vaciar-carrito-btn:focus {
+  outline: none;
+  box-shadow:  0 0 0 0.2rem rgba(220, 53, 69, 0.5);  /* Sombra de enfoque sutil */
+}
+
+/* Contacto ------------------------------------*/
+
+.contacto-p{
+    color: black;
+}
