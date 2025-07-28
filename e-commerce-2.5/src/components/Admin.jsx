@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 
 export default function Admin() {
   const {user} = useAuthContext(); 
-  if (!user) {
+  if (user !== 'admin') {
     return <Navigate to="/login" replace />;
   }
   return (

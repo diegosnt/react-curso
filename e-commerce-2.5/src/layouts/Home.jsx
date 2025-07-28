@@ -1,6 +1,6 @@
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-import Main from "../components/Main"
+import MainHome from "../components/MainHome"
 
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
     return(
         <div>
             <Header/>
-            <Main/>
+            <MainHome/>
             <Footer/>
         </div>
     )

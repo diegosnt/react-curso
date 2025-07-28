@@ -14,7 +14,7 @@ function Card({ producto }) {
       </Link>
       <p className="producto-price"> $ {producto.price}</p>
       <Link to={"/productos/" + producto.id}>
-        <button className="boton-detalles">Ver detalles del productoi</button>
+        <button className="boton-detalles">Ver Detalles</button>
       </Link>
     </div>
   );

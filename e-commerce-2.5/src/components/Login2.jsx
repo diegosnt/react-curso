@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
 import Swal from "sweetalert2";
+import "../styles/Global.css";
 function Login2() {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +19,10 @@ function Login2() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulación de autenticación
-    if (usuario === "admin" && password === "1234") {
+    if (
+      (usuario === "admin" && password === "1234") ||
+      (usuario === "user1" && password === "1234")
+    ) {
       Swal.fire({
         title: "¡Bienvenido!",
         text: "Has iniciado sesión correctamente.",
@@ -38,26 +42,30 @@ function Login2() {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Iniciar sesión</h2>
-      <div>
-        <label>Usuario:</label>
-        <input
-          type="text"
-          value={usuario}
-          onChange={(e) => setUsuario(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Contraseña:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button type="submit">Iniciar sesión</button>
-    </form>
+    <div className="formulario-container">
+      <form className="formulario-producto" onSubmit={handleSubmit}>
+        <h2>Iniciar sesión</h2>
+        <div className="formulario-grupo">
+          <label>Usuario:</label>
+          <input
+            type="text"
+            value={usuario}
+            onChange={(e) => setUsuario(e.target.value)}
+            required
+          />
+        </div>
+        <div className="formulario-grupo">
+          <label>Contraseña:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button className="formulario-boton" type="submit">Iniciar sesión</button>
+      </form>
+    </div>
   );
 }
 export default Login2;

@@ -35,7 +35,7 @@ function ProductosContainer({ functionCarrito }) {
     return (
       <div className="productos-conteiner">
         {productos.map((producto) => (
-          <Card producto={producto} />
+          <Card key={producto.id} producto={producto} />
         ))}
       </div>
     );

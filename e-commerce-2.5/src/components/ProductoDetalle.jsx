@@ -1,10 +1,20 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
 import { dispararSweetBasico } from "../assets/SweetAlert";
 import { CarritoContext } from "../contexts/CarritoContext";
+import { useProductosContext } from "../contexts/ProductosContext";
+import { useAuthContext } from "../contexts/AuthContext.jsx";
+
+
 import "../styles/Global.css";
 
 function ProductoDetalle({}) {
+
+  const navegar = useNavigate();
+
+  const { user } = useAuthContext();
+  const { eliminarProducto } = useProductosContext();
 
   const {agregarAlCarrito} = useContext(CarritoContext);
 
@@ -52,6 +62,19 @@ function ProductoDetalle({}) {
     if (cantidad > 1) setCantidad(cantidad - 1);
   }
 
+  const dispararEliminar = () => {
+    const promise = eliminarProducto(id);
+    if (promise) {
+      promise
+        .then(() => {
+          navegar("/productos");
+        })
+        .catch((error) => {
+          dispararSweetBasico("Error", "No se pudo eliminar el producto.", "error", "Cerrar");
+        });
+    }
+  };
+
   if (cargando) return <p className="cargando">Cargando producto...</p>;
   if (error) return <p>{error}</p>;
   if (!producto) return null;
@@ -68,8 +91,21 @@ function ProductoDetalle({}) {
           <span>{cantidad}</span>
           <button onClick={sumarContador}>+</button>
         </div>
-        <button onClick={funcionCarrito}>Agregar al carrito</button>
+        {user === 'admin' ? (
+          <>
+            <Link to={`/admin/editarProducto/${id}`}>
+              <button className="boton-detalles" >Editar producto</button>
+            </Link>
+            <div>
+                          <button onClick={dispararEliminar} className="boton-eliminar-producto">Eliminar Producto</button>
+            </div>
+
+          </>
+        ) : (
+          <button onClick={funcionCarrito} className="boton-detalles" > Agregar al carrito</button>
+        )}
       </div>
+
     </div>
   );
 }
